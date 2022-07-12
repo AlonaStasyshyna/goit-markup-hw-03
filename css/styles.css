@@ -19,16 +19,31 @@ body {
 
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
 }
 
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: 2px solid tomato;
+}
+
 /* Логотип */
 .logo {
-  color: #000000;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
 
+  color: #000000;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -44,7 +59,32 @@ footer > .logo {
 }
 
 /* Шапка */
+header {
+  border: 1px solid #ececec;
+}
+
+header > .container {
+  display: flex;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+}
+
+.site-nav-item + .site-nav-item {
+  margin-left: 50px;
+}
+
 header .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: inherit;
 
   font-weight: 500;
@@ -65,28 +105,46 @@ header .link:focus {
   color: var(--accent-color);
 }
 
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts-item + .contacts-item {
+  margin-left: 50px;
+}
+
 /* Страница index.html */
 
 /* Герой */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+
   background-color: #2f303a;
 }
 
 .hero-title {
-  color: var(--primary-white-color);
+  margin-top: 0;
+  margin-bottom: 30px;
 
+  color: var(--primary-white-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .hero-button {
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 4px;
+  border: 0;
+
   color: var(--primary-white-color);
   background-color: var(--accent-color);
-
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
